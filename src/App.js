@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import {AiOutlinePlus} from 'react-icons/ai'
 
 function App() {
+const [todos, setTodos] = useState(['Learn' , 'Fortnite'])
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <h3 className="heading">Todo App</h3>
+        <form className="form__style">
+          <input type="text" placeholder="Add toDo"/>
+          <button><AiOutlinePlus size={30}/> </button>
+        </form>
+        <ul>
+
+        </ul>
+      </div>
     </div>
   );
 }
