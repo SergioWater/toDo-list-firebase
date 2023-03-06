@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {AiOutlinePlus} from 'react-icons/ai'
+import Todo from "./Todo";
 
 function App() {
 const [todos, setTodos] = useState(['Learn' , 'Fortnite'])
@@ -8,14 +9,19 @@ const [todos, setTodos] = useState(['Learn' , 'Fortnite'])
   return (
     <div className="App">
       <div className="container">
-        <h3 className="heading">Todo App</h3>
-        <form className="form__style">
+        <h3>Todo App</h3>
+        <form>
           <input type="text" placeholder="Add toDo"/>
-          <button><AiOutlinePlus size={30}/> </button>
+          <button className="btn"><AiOutlinePlus size={30}/> </button>
         </form>
         <ul>
-
+          {todos.map((todo, index) =>{
+            return(
+            <Todo key={index} todo={todo}/>
+            )
+          })}
         </ul>
+        <p className="count">You have 3 todos</p>
       </div>
     </div>
   );
