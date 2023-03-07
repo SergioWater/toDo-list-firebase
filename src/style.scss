@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -11,6 +16,21 @@ body {
   height: 100vh;
   width: 100vw;
 }
+.row {
+    display: flex;
+  }
+.btn {
+  background-color: rgb(168 85 247);
+  margin-left: 0.5rem;
+  padding: 16px;
+  color: rgb(241 245 249);
+  border: none;
+    :hover{
+        cursor: pointer;
+
+    }
+}
+
 .container {
   background-color: rgb(241 245 249);
   max-width: 500px;
@@ -32,28 +52,22 @@ body {
   form {
     display: flex;
     justify-content: space-between;
-
-
   }
-  input{
+    .big{
     padding: 8px;
     width: 100%;
     font-size: 1.25rem; /* 20px */
     line-height: 1.75rem; /* 28px */
   }
-
 }
-.btn{
-    background-color: rgb(168 85 247);
-    margin-left: 0.5rem;
-    padding: 16px;
-    color: rgb(241 245 249);
-  }
-  .count{
-    text-align: center ;
-    padding: 8px;
-  }
-  li{
+
+.count {
+  text-align: center;
+  padding: 8px;
+}
+
+//uncompleted list
+.uncompletedli {
     display: flex;
     justify-content: space-between;
     background-color: rgb(226 232 240);
@@ -61,17 +75,53 @@ body {
     margin-top: 0.5rem; /* 8px */
     margin-bottom: 0.5rem; /* 8px */
     text-transform: capitalize;
+    text-decoration: none;
+    button{
+        border: none;
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+
+    }
+    button:hover{
+        cursor: pointer;
+    }
+}
+
+.text{
+    margin-left: 0.5rem;
+    display: flex;
+    cursor: pointer;
+    font-size: normal;
+    font-weight: 600;
+}
+.textComplete{
+  margin-left: 0.5rem;
+  cursor: pointer;
+  text-decoration-line: line-through;
+}
+.licompleted {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(135, 140, 146);
+    padding: 32px;
+    margin-top: 0.5rem; /* 8px */
+    margin-bottom: 0.5rem; /* 8px */
+    text-transform: capitalize;
+    text-decoration: none;
     p{
         margin-left: 0.5rem;
         cursor: pointer;
+        font-size: normal;
+        font-weight: 600;
     }
-  }
-  .row{
-    display: flex;
-  }
-  .text-completed{
-    margin-left: 0.5rem;
-    cursor: pointer; 
-    text-decoration-line: line-through;
-  }
-  
+    button{
+        border: none;
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+}
